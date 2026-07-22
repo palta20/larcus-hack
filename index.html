@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siber Rehber | Etik Hackerlık ve Gizlilik</title>
+    <!-- Tailwind CSS (Tasarım ve Düzen) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (İkonlar) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts (Terminal Yazı Tipi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Ayarları (Renkler ve Fontlar) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        cyber: '#00ff9d', /* Siber Neon Yeşil */
+                        bgdark: '#050505', /* Çok Koyu Arka Plan */
+                        carddark: '#111111' /* Kart Arka Planı */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Özel CSS Eklemeleri -->
+    <style>
+        body { 
+            background-color: #050505; 
+            color: #e5e5e5; 
+            font-family: 'Fira Code', monospace; 
+        }
+        .glow-text { 
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.7); 
+        }
+        .glow-border { 
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3); 
+            border: 1px solid rgba(0, 255, 157, 0.5); 
+        }
+        .hover-glow:hover { 
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.6); 
+            transform: translateY(-2px);
+        }
+        /* Gizli Scrollbar (Daha temiz görünüm için) */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff9d; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Arka Plan Müziği (Buraya istediğin müziğin linkini koyabilirsin, şu an telifsiz bir ritim var) -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 1. Menü (Navbar) -->
+    <nav class="fixed w-full z-50 bg-bgdark/90 backdrop-blur-md border-b border-gray-800 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-cyber text-3xl"></i>
+                    <span class="text-white text-2xl font-bold tracking-widest">SİBER<span class="text-cyber">REHBER</span></span>
+                </div>
+                <!-- Masaüstü Menü (Telefonda gizlenir) -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm font-semibold">
+                        <a href="#home" class="hover:text-cyber transition">ANA SAYFA</a>
+                        <a href="#egitimler" class="hover:text-cyber transition">EĞİTİMLER</a>
+                        <a href="#egitimler" class="hover:text-cyber transition">ANONİMLİK</a>
+                        <a href="#egitimler" class="hover:text-cyber transition">TERMUX & PYTHON</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero (Giriş) Bölümü -->
+    <section id="home" class="pt-32 pb-20 flex flex-col items-center justify-center text-center px-4 min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-bgdark to-bgdark">
+        <div class="border border-cyber/30 px-4 py-1 rounded-full text-cyber text-xs md:text-sm mb-8 animate-pulse">
+            <i class="fa-solid fa-satellite-dish mr-2"></i>Sistem Çevrimiçi. Bağlantı Güvenli.
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+            Siber Güvenlik Dünyasına <br>
+            <span class="text-cyber glow-text">Ücretsiz Adım Atın</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12">
+            Beyaz şapkalı hackerlık yetenekleri kazanın, internette anonimliğinizi koruyun. Sıfırdan ileri seviyeye etik güvenlik rehberleri.
+        </p>
+        <a href="#egitimler" class="bg-transparent border-2 border-cyber text-cyber px-10 py-4 rounded-lg font-bold text-lg hover-glow transition-all duration-300 flex items-center gap-3">
+            <i class="fa-solid fa-terminal"></i> EĞİTİMLERE BAŞLA
+        </a>
+    </section>
+
+    <!-- 3. Eğitim Modülleri (Kartlar) -->
+    <section id="egitimler" class="py-24 px-4 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-16 justify-center">
+                <div class="h-[1px] w-12 bg-cyber/50"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white tracking-wider">EĞİTİM MODÜLLERİ</h2>
+                <div class="h-[1px] w-12 bg-cyber/50"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Kart 1 -->
+                <div class="bg-carddark p-8 rounded-xl border border-gray-800 hover:border-cyber hover:bg-gray-900 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-cyber transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                    <i class="fa-solid fa-user-secret text-4xl text-cyber mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">İnternette Anonimlik</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tor ağı, VPN mantığı, dijital ayak izini silme ve internette görünmez olma sanatı.</p>
+                </div>
+                
+                <!-- Kart 2 -->
+                <div class="bg-carddark p-8 rounded-xl border border-gray-800 hover:border-cyber hover:bg-gray-900 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-cyber transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                    <i class="fa-solid fa-bug text-4xl text-cyber mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Etik Hackerlığa Giriş</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Temel siber güvenlik kavramları, zafiyet analizi ve sistem savunma mantığı.</p>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="bg-carddark p-8 rounded-xl border border-gray-800 hover:border-cyber hover:bg-gray-900 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-cyber transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                    <i class="fa-solid fa-mobile-screen text-4xl text-cyber mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Termux & Terminal</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Mobil cihazlar üzerinden komut satırı kullanımı ve temel sızma testi araçları.</p>
+                </div>
+
+                <!-- Kart 4 -->
+                <div class="bg-carddark p-8 rounded-xl border border-gray-800 hover:border-cyber hover:bg-gray-900 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-cyber transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                    <i class="fa-brands fa-python text-4xl text-cyber mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Python Güvenlik</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Kendi siber güvenlik otomasyonlarınızı ve araçlarınızı yazmaya başlama rehberi.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer & Yasal Uyarı -->
+    <footer class="bg-black pt-16 pb-8 border-t border-gray-900 mt-10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            
+            <!-- Yasal Uyarı Kutusu -->
+            <div class="border border-red-900/50 bg-red-950/20 p-6 rounded-lg mb-12 shadow-[0_0_15px_rgba(220,38,38,0.1)]">
+                <h4 class="text-red-505 font-bold mb-3 tracking-widest text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i> YASAL UYARI
+                </h4>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Bu web sitesinde yer alan tüm bilgi, araç ve eğitimler yalnızca <span class="text-white font-semibold">etik, savunma ve farkındalık</span> amaçlıdır. Öğrenilen bilgilerin yasa dışı veya izinsiz kullanımından site yönetimi sorumlu tutulamaz. Kendi sistemleriniz ve yasal izinli ağlar dışında hiçbir hedefe müdahale etmeyiniz.
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex gap-6 text-gray-500 text-xl">
+                    <a href="#" class="hover:text-cyber transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-cyber transition"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <p class="text-gray-500 text-sm">© 2026 Siber Rehber. Tüm Hakları Saklıdır.</p>
+                <p class="text-gray-600 text-xs"><i class="fa-solid fa-envelope mr-2"></i>info@siberrehber.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 5. Müzik Başlat/Durdur Butonu (Sağ Alt Köşe) -->
+    <button id="music-btn" class="fixed bottom-6 right-6 bg-carddark border border-gray-700 text-gray-400 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:border-cyber hover:text-cyber transition-all duration-300 z-50 group">
+        <i id="music-icon" class="fa-solid fa-music text-xl group-hover:scale-110 transition-transform"></i>
+    </button>
+
+    <!-- Javascript Etkileşimleri -->
+    <script>
+        // --- Müzik Çalar Kontrolü ---
+        const musicBtn = document.getElementById('music-btn');
+        const musicIcon = document.getElementById('music-icon');
+        const bgMusic = document.getElementById('bg-music');
+        let isPlaying = false;
+
+        // Müziğin sesini arka plana uyumlu olması için %15'e sabitle
+        bgMusic.volume = 0.15;
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-music');
+                musicBtn.classList.remove('border-cyber', 'text-cyber', 'glow-border', 'bg-gray-900');
+            } else {
+                bgMusic.play().catch(e => console.log("Otomatik oynatma engellendi."));
+                musicIcon.classList.remove('fa-music');
+                musicIcon.classList.add('fa-pause');
+                musicBtn.classList.add('border-cyber', 'text-cyber', 'glow-border', 'bg-gray-900');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // --- Sayfa Kaydırıldığında Menü Arka Planını Koyulaştırma ---
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'shadow-cyber/5');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-cyber/5');
+            }
+        });
+    </script>
+</body>
+</html>
